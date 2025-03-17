@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assignment26</title>
+    <style>
+        .array {
+            border: 2px dotted black;
+            border-color: rgb(117, 117, 183);
+            background-color: lightblue;
+            margin: 10px 20px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 30px;
+            box-shadow: 4px 4px 3px red;
+        }
+    </style>
 </head>
-<body>
-    
+<body style="background-color: beige;">
+    <h1 style="background-color: aqua; text-align: center;">DYNAMIC CARDS</h1>
+    <div id="kawane"></div>
+
+    <script>
+        const arr = ["Aditya", "Samarth", "Sham", "Krishna", "Ram", "Rushi", "Kiran", "Amol"];
+        const students = document.getElementById("kawane");
+
+        // Corrected way using backticks for template literals
+        for (let i = 0; i < arr.length; i++) {
+            students.innerHTML += `<div class='array'>${arr[i].toUpperCase()}</div>`;
+        }
+    </script>
 </body>
 </html>
